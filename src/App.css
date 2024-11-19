@@ -1,0 +1,156 @@
+/* Resetando margens e paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Fundo escuro */
+  color: #eaeaea; /* Texto claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container para centralizar o bloco de notas */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #3b3b3b, #121212); /* Gradiente sutil */
+}
+
+/* Estilo do bloco de notas */
+.notepad {
+  background-color: #1e1e1e; /* Fundo escuro para o bloco */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título do bloco de notas */
+.title {
+  font-size: 2.5rem;
+  color: #f0f0f0; /* Cor clara para o título */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo da área de texto (textarea) */
+.textarea {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  font-size: 1.1rem;
+  border: 2px solid #333; /* Borda suave */
+  border-radius: 8px;
+  background-color: #2a2a2a; /* Fundo escuro do campo de texto */
+  color: #eaeaea; /* Texto claro dentro do campo */
+  margin-bottom: 20px;
+  resize: none;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quando o textarea está em foco */
+.textarea:focus {
+  border-color: #bb86fc; /* Cor suave de foco */
+  box-shadow: 0 0 8px rgba(187, 134, 252, 0.5); /* Brilho suave */
+}
+
+/* Estilo dos botões */
+.actions {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Estilo do botão */
+.button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Botão salvar */
+.save {
+  background-color: #6200ea; /* Cor vibrante para salvar */
+  color: white;
+}
+
+.save:hover {
+  background-color: #3700b3; /* Cor mais escura ao passar o mouse */
+  transform: translateY(-2px);
+}
+
+.save:active {
+  transform: translateY(2px);
+}
+
+/* Botão remover */
+.clear {
+  background-color: #cf6679; /* Cor suave para remover */
+  color: white;
+}
+
+.clear:hover {
+  background-color: #b00020; /* Cor mais escura ao passar o mouse */
+  transform: translateY(-2px);
+}
+
+.clear:active {
+  transform: translateY(2px);
+}
+
+/* Estilo da lista de notas */
+.notes-list {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.note {
+  background-color: #2a2a2a;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note p {
+  margin-right: 20px;
+  flex-grow: 1;
+}
+
+.note button {
+  background-color: #cf6679;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note button:hover {
+  background-color: #b00020;
+}
